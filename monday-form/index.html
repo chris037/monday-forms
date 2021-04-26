@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Monday Web Forms</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+:root {
+  --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
+
+::placeholder {
+  color: #ccc;
+  font-size: 1.5rem;
+   font-family: 'Lato', sans-serif;
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+        section{
+            display: flex;
+            justify-content: center;
+        }
+        showcase-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
+  animation: slideInFromRight 1s ease-in;
+}
+
+.showcase-form .form-control {
+  margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'],
+.showcase-form textarea{
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+
+.showcase-form input:focus,
+.showcase-form textarea:focus {
+  outline: none;
+}
+
+.showcase-form textarea{
+    color: #333;
+
+}
+
+.showcase::before,
+.showcase::after {
+  content: '';
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background: #fff;
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+}
+
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+}
+
+.bg-primary,
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+    </style>
+</head>
+
+<body>
+</body>
+<section class="showcase">
+
+         <div class="showcase-form card">
+                <h2>Job Order Request Form</h2>
+                
+                 <form   name="contact" netlify-honeypot="bot-field" method="POST" data-netlify="true"
+<input type="hidden" name="form-name" value="contact">
+                    <div class="form-control">
+                        <input type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-control">
+                        <textarea id="message" name="mesage" rows="10" cols="50" placeholder="Type your request here"></textarea>
+                    </div>
+
+                    <input type="submit" value="Send" class="btn btn-primary">
+                </form>
+        </div>
+
+
+</section>
+
+</html>
